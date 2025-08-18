@@ -8,7 +8,7 @@ import CriandoItem.*;
 public class CategoriaDAO {
     
     public boolean inserir(Categoria cat){
-        String sql = "INSERT INTO categorias (nome, preco) VALUES (?, ?)";
+        String sql = "INSERT INTO categorias (nome, ativo) VALUES (?, ?)";
 
         try (Connection conn = Conexao.conectar();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -43,7 +43,7 @@ public class CategoriaDAO {
         return lista;
     }
     public void atualizar(Categoria cat) {
-        String sql = "UPDATE categorias SET nome=?, preco=? WHERE id=?";
+        String sql = "UPDATE categorias SET nome=?, ativo=? WHERE id=?";
 
         try (Connection conn = Conexao.conectar();
              PreparedStatement stmt = conn.prepareStatement(sql)) {

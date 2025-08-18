@@ -9,29 +9,16 @@ import javax.swing.*;
 public class Inserir extends JFrame {
 
 
-    private JPanel tela_pergunta,tela;
-    private JLabel nome, preco,pergunta;
+    private JPanel tela;
+    private JLabel nome, preco;
     private JTextField envNome,envPreco;
-    private JButton enviar, produto, categoria;
+    private JButton enviar;
     public Inserir(){
          super("Inserir Produto");
 
-
-        pergunta();
+        prod();
     }
-    public void pergunta(){
-        tela_pergunta = new JPanel();
-        pergunta = new JLabel("Você vai adicionar um:");
-        produto = new JButton("Produto");
-        categoria= new JButton("Categoria");
-
-
-        produto.addActionListener(e-> prod());
-        
-        tela_pergunta.setVisible(true);
-    }
-
-
+    
     public void prod(){
         tela = new JPanel();
         this.setSize(400, 300);
