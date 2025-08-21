@@ -42,7 +42,7 @@ public class CategoriaDAO {
         }
         return lista;
     }
-    public void atualizar(Categoria cat) {
+    public boolean atualizar(Categoria cat) {
         String sql = "UPDATE categorias SET nome=?, ativo=? WHERE id=?";
 
         try (Connection conn = Conexao.conectar();
@@ -53,12 +53,14 @@ public class CategoriaDAO {
             stmt.setInt(3, cat.getId());
             stmt.executeUpdate();
             System.out.println("Categoria atualizada!");
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
+            return false;
         }
     }
 
-    public void deletar(int id) {
+    public boolean deletar(int id) {
         String sql = "DELETE FROM categorias WHERE id=?";
 
         try (Connection conn = Conexao.conectar();
@@ -67,8 +69,10 @@ public class CategoriaDAO {
             stmt.setInt(1, id);
             stmt.executeUpdate();
             System.out.println("Categoria deletada!");
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
+            return false;
         }
     }
     }

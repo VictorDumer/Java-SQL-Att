@@ -8,7 +8,15 @@ public class Categoria {
         this.nome=nome;
         this.ativo=ativo;
     }
+    public Categoria(String nome, boolean ativo, int id){
+        this.nome=nome;
+        this.ativo=ativo;
+        this.id=id;
+    }
 
+    public String toString() {
+        return "ID: " + id + " | Nome: " + nome + " | Ativo: " + (ativo ? "Sim" : "Não");
+    }
     
     public int getId() {
         return id;

@@ -45,7 +45,7 @@ public class ProdutoDAO {
         }
         return lista;
     }
-    public void atualizar(Produto p) {
+    public boolean atualizar(Produto p) {
         String sql = "UPDATE produtos SET nome=?, preco=? WHERE id=?";
 
         try (Connection conn = Conexao.conectar();
@@ -56,14 +56,15 @@ public class ProdutoDAO {
             stmt.setInt(3, p.getId());
             stmt.executeUpdate();
             System.out.println("Produto atualizado!");
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
-            
+            return false;
 
         }
     }
 
-    public void deletar(int id) {
+    public boolean deletar(int id) {
         String sql = "DELETE FROM produtos WHERE id=?";
 
         try (Connection conn = Conexao.conectar();
@@ -72,9 +73,10 @@ public class ProdutoDAO {
             stmt.setInt(1, id);
             stmt.executeUpdate();
             System.out.println("Produto deletado!");
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
-            
+            return false;
 
         }
     }

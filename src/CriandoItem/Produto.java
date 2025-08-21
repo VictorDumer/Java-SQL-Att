@@ -9,11 +9,19 @@ public class Produto {
         this.nome=nome;
         this.preco=preco;
     }
+    public Produto(String nome, Double preco,int id){
+        this.nome=nome;
+        this.preco=preco;
+        this.id=id;
+    }
     
     public int getId() {
         return id;
     }
-
+    
+    public String toString() {
+        return "ID: " + id + " | Nome: " + nome + " | Preço: R$ " + preco;
+    }
 
     public String getNome() {
         return nome;
