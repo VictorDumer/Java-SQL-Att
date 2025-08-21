@@ -1,18 +1,96 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+---
 
-## Folder Structure
+## 📦 Projeto: Sistema de Cadastro com Java, SQL e Swing
 
-The workspace contains two folders by default, where:
+### 🧰 Tecnologias Utilizadas
+- **Java** – Lógica de programação e estrutura principal
+- **Java Swing** – Interface gráfica (GUI)
+- **JDBC + SQL** – Conexão e manipulação de banco de dados relacional
+---
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### 📋 Descrição
+Este projeto é um sistema simples de cadastro e listagem de **Produtos** e **Categorias**, com interface gráfica desenvolvida em Java Swing e com persistência de dados via SQL.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+O sistema permite:
+- ✅ Cadastrar produtos com nome e preço
+- ✅ Cadastrar categorias com nome e status ativo/inativo
+- ✅ Listar produtos e categorias em uma interface com rolagem
+- ✅ Conectar ao banco de dados e realizar operações CRUD
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+---
 
-## Dependency Management
+### 🖼️ Interface
+A interface foi construída com **Java Swing**, utilizando componentes como:
+- `JFrame`, `JPanel`, `JTextArea`, `JButton`, `JScrollPane`
+- Mensagens de erro e sucesso com `JOptionPane`
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+---
+
+### 🗃️ Estrutura do Projeto
+```
+src/
+├── Data/
+│   ├── ProdutoDAO.java
+│   └── CategoriaDAO.java
+├── Model/
+│   ├── Produto.java
+│   └── Categoria.java
+└── Telas/
+    ├── Listar.java
+    └── Cadastro.java
+```
+
+---
+
+### 🛠️ Como Executar
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-projeto.git
+   ```
+2. Importe o projeto em sua IDE Java (Eclipse, IntelliJ, NetBeans etc.)
+3. Configure o banco de dados:
+   - Crie o banco e as tabelas necessárias
+   - Atualize as credenciais de conexão no DAO
+4. Execute a classe principal (ex: `Main.java`)
+
+---
+
+### 🗄️ Exemplo de Tabela SQL
+
+```sql
+CREATE TABLE Categoria (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    ativo BOOLEAN
+);
+
+CREATE TABLE Produto (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    preco DOUBLE
+);
+```
+
+---
+
+### 🚨 Tratamento de Erros
+- Mensagens amigáveis para falhas de conexão com o banco
+- Validação de campos obrigatórios
+- Logs no console para depuração
+
+---
+
+### 📌 Melhorias Futuras
+- 🔍 Filtro de busca por nome
+- ✏️ Edição de registros
+- 🗑️ Exclusão de produtos e categorias
+
+---
+
+### 👨‍💻 Autor
+- **Victor Dumer**
+- GitHub: [@VictorDumer](https://github.com/VictorDumer)
+- LinkedIn: [VictorDumer](https://linkedin.com/in/VictorDumer)
+
+---
