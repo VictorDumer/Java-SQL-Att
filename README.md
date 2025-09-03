@@ -46,7 +46,7 @@ src/
 ### 🛠️ Como Executar
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-projeto.git
+   git clone https://github.com/VictorDumer/https://github.com/VictorDumer/Java-SQL-Att.git
    ```
 2. Importe o projeto em sua IDE Java (Eclipse, IntelliJ, NetBeans etc.)
 3. Configure o banco de dados:
