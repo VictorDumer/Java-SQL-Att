@@ -81,12 +81,7 @@ CREATE TABLE Produto (
 
 ---
 
-### 📌 Melhorias Futuras
-- 🔍 Filtro de busca por nome
-- ✏️ Edição de registros
-- 🗑️ Exclusão de produtos e categorias
 
----
 
 ### 👨‍💻 Autor
 - **Victor Dumer**
