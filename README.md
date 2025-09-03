@@ -59,13 +59,13 @@ src/
 ### 🗄️ Exemplo de Tabela SQL
 
 ```sql
-CREATE TABLE Categoria (
+CREATE TABLE Categorias (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
     ativo BOOLEAN
 );
 
-CREATE TABLE Produto (
+CREATE TABLE Produtos (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
     preco DOUBLE
